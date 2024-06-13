@@ -1,0 +1,84 @@
+adi@Ubuntu:~/Documents/Ex_1$ ./myshell
+hello: date >> myfile 
+hello: cat myfile 
+Fri May 31 05:40:00 PM EEST 2024
+hello: date -u >> myfile 
+hello: cat myfile 
+Fri May 31 05:40:00 PM EEST 2024
+Fri May 31 02:40:32 PM UTC 2024
+hello: wc -l < myfile 
+2
+hello: prompt = hi: 
+hi: mkdir mydir 
+hi: cd mydir 
+hi: pwd 
+/home/adi/Documents/Ex_1/mydir
+hi: touch file1 file2 file3 
+hi: ls 
+file1  file2  file3
+hi: !! 
+file1  file2  file3
+hi: echo abc xyz 
+abc xyz
+hi: ls 
+file1  file2  file3
+hi: echo $? 
+0
+hi: ls no_such_file 
+ls: cannot access 'no_such_file': No such file or directory
+hi: echo $? 
+2
+hi: ls no_such_file 2> file 
+You typed Control-C!
+hi: cat colors.txt 
+hi: cat > colors.txt 
+blue
+black
+red
+red
+green
+blue
+green
+red
+red
+blue
+hi: cat colors.txt 
+blue
+black
+red
+red
+green
+blue
+green
+red
+red
+blue
+hi: cat colors.txt| cat | cat | cat 
+blue
+black
+red
+red
+green
+blue
+green
+red
+red
+blue
+hi: sort colors.txt | uniq -c | sort -r | head -3 
+      4 red
+      3 blue
+      2 green
+hi: if date | grep Fri then echo "friday" else echo "not friday" fi 
+friday
+hi: $person = hod 
+hi: echo person 
+person
+hi: echo $person 
+hod
+hi: read name 
+adi
+hi: echo $name 
+adi
+hi: echo $person 
+hod
+hi: quit 
